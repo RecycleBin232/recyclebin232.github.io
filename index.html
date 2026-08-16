@@ -1,40 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>rb</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="depictions/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<meta charset="UTF-8">
+<title>RecycleBin's Repo</title>
+
+<style>
+body {
+    margin:0;
+    padding-top:70px;
+    text-align:center;
+    font-family:Helvetica, Arial, sans-serif;
+    color:white;
+    min-height:100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            transparent 40%,
+            rgba(0,0,0,.15)
+        ),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,.06) 0px,
+            rgba(255,255,255,.06) 1px,
+            transparent 1px,
+            transparent 3px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(0,0,0,.08) 0px,
+            rgba(0,0,0,.08) 1px,
+            transparent 1px,
+            transparent 3px
+        ),
+        #3b3b3b;
+}
+
+body::before {
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.08) 0,
+            transparent 1px
+        );
+
+    background-size:4px 4px;
+
+    pointer-events:none;
+}
+
+h1 {
+    font-size:34px;
+    color:#eee;
+
+    text-shadow:
+        0 2px 0 #000,
+        0 4px 8px rgba(0,0,0,.8);
+
+    font-weight:bold;
+}
+
+.repo {
+    margin:40px auto;
+
+    width:320px;
+
+    padding:30px 20px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #555,
+            #222
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.2),
+        0 8px 20px rgba(0,0,0,.8);
+}
+
+.add img {
+    width:220px;
+    margin-top:20px;
+
+    filter:
+        drop-shadow(
+        0 5px 5px rgba(0,0,0,.8)
+        );
+}
+</style>
+
 </head>
+
 <body>
 
-<div class="container">
-	<h1><img src="CydiaIcon.png"> rb</h1>
+<div class="repo">
+
+<h1>RecycleBin's Repo</h1>
+
+<a class="add"
+href="cydia://url/https://cydia.saurik.com/api/share#?source=https://recyclebin232.github.io">
+
+<img src="cydia.png" alt="Add to Cydia">
+
+</a>
+
 </div>
 
-<div class="container">
-	<div class="card">
-		<div class="card-body">
-			<p><span class="text-primary"><b>Reposi3</span></b> is a Cydia repository template.</p>
-			<a class="btn btn-sm btn-primary" href="cydia://url/https://cydia.saurik.com/api/share#?source=https://supermamon.github.io/Reposi3/">Add to Cydia</a>
-		</div>
-	</div>
-</div>
-<p></p>
-<div class="container">
-  <h3 id="wells" class="page-header">Featured Packages</h3>
-</div>
-
-<div class="container">
-	<div class="card">
-		<div class="card-header">
-			Old Package
-		</div>
-		<div class="card-body">
-		  <p class="card-text">This is a sample package with minimal information.
-			It also simulates an old package that's incompatible only with iOS lower than 7.0.</p>
+</body>
+</html>			It also simulates an old package that's incompatible only with iOS lower than 7.0.</p>
 			<a class="btn btn-xs btn-primary" href="depictions/?p=com.supermamon.oldpackage">More info</a>
 		</div>
 	</div>
